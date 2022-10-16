@@ -2,11 +2,11 @@ import { addExtraTrackersDnD5, addExtraTrackersTidy } from './actorOverride.js';
 
 Hooks.on('renderActorSheet5eCharacter', (sheet, html, character) => {
   let sheetClasses = sheet.options.classes;
-  /*if (sheetClasses[0] === "tidy5e") {
+  if (sheetClasses[0] === "tidy5e") {
     addExtraTrackersTidy(html, sheet.actor);
   } else {
-  */  addExtraTrackersDnD5(html, sheet.actor);
-  //}
+    addExtraTrackersDnD5(html, sheet.actor);
+  }
 });
 
 Hooks.once('setup', async function () {
